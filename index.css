@@ -152,3 +152,112 @@ input[type="radio"]{
     background-color: #bd301d;
     border: 2px solid #bd301d;
 }
+
+
+
+#dmode {
+    top: 30px;
+    width: 100px;
+    height: 40px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 60px;
+    box-shadow: inset 0px 2.5px 7.5px rgba(0, 0, 0, 0.4), inset 0px -2.5px 7.5px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 0 auto;
+}
+
+#dmode::after {
+    content: "";
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: linear-gradient(180deg, #FB7185, #E11D48);
+    border-radius: 40px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+}
+
+ input[type=checkbox] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+ }
+
+ input:checked + #dmode {
+    background: #5a5a5a;
+ }
+
+ input:checked + #dmode::after {
+    left: 97px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #FB7185 #E11D48);
+ }
+
+ #dmode:active::after {
+    width: 45px;
+ }
+
+ .darkmode {
+    background-color: #881337;
+ }
+ 
+ .dmodeBottom {
+    background-color: #242424;
+ }
+
+ .dmodeSubSection {
+    color: #FFE4E6;
+    background-color: #F43F5E;
+ }
+
+ .dmodeH {
+    color: #FECDD3;
+ }
+
+ #dmode svg {
+    position: absolute;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    z-index: 1000;
+ }
+
+ #dmode svg.sun {
+    left: 8px;
+    transition: 0.2s;
+    fill: #FFE4E6;
+ }
+
+ #dmode svg.moon {
+    left: 70px;
+    top: 9px;
+    width: 22px;
+    height: 22px;
+    transition: 0.2s;
+    fill: #FDA4AF;
+ }
+
+ input:checked + #dmode svg.sun {
+    fill: #FDA4AF;
+ }
+ input:checked + #dmode svg.moon {
+    fill: #FFE4E6;
+ }
+
+ .darkmode {
+    background-color: #67595E;
+ }
+
+ .darkmodeHeader {
+    background-color: #fff;
+ }
+
+ .dModeButton {
+    background-color: #FDA4AF;
+    color: #67595E;
+ }

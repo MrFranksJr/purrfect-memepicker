@@ -168,7 +168,10 @@ const catsData = [
         alt: "A cat looking sad",
     },
 ]
+const emotionRadiosDiv = document.getElementById("emotion-radios")
+const getImageBtn = document.getElementById("get-image-btn")
 
+//get all emotions from the cats array into an emotions array
 function getEmotionsArray(cats){
     const allEmotions = []
     for (let cat of cats) {
@@ -176,5 +179,51 @@ function getEmotionsArray(cats){
             allEmotions.push(emotion)
         }
     }
-    return emotionsArray
+    return allEmotions
 }
+
+//get emotionsarray and return radios
+function renderEmotionsArray(cats) {
+    const emotions = getEmotionsArray(cats)
+    let htmlString = ""
+    for (let emotion of emotions) {
+        htmlString += `<p>${emotion}</p>`
+    }
+    emotionRadiosDiv.innerHTML = htmlString
+}
+
+renderEmotionsArray(catsData)
+
+
+
+
+
+
+
+//darkmode
+const dModeToggle = document.getElementById("darkmode-toggle")
+const bodyEl = document.body
+const headEr = document.getElementById("header")
+
+
+dModeToggle.addEventListener("change", (event) => {
+    if (event.currentTarget.checked) {
+        switchModes()
+    } else {
+        switchModes()
+    }
+  })
+  
+  function switchModes() {
+    if (dModeToggle.checked) {
+        bodyEl.classList.add("darkmode")
+        headEr.classList.add("darkmodeHeader")
+        getImageBtn.classList.add("dModeButton")
+    }
+    else {
+        bodyEl.classList.remove("darkmode")
+        headEr.classList.remove("darkmodeHeader")
+        getImageBtn.classList.remove("dModeButton")
+    }
+  }
+  switchModes()
