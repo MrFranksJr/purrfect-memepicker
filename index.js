@@ -1,13 +1,14 @@
 import { catsData } from '/data.js'
+
 const emotionRadios = document.getElementById("emotion-radios")
 const getImageBtn = document.getElementById("get-image-btn")
 const closeBtn = document.getElementById("meme-modal-close-btn")
 const modal = document.getElementById("meme-modal")
 
 //eventListener
-getImageBtn.addEventListener('click', renderCat)
 emotionRadios.addEventListener('change', highlightCheckedOption)
 closeBtn.addEventListener('click', closeModal)
+getImageBtn.addEventListener('click', renderCat)
 
 //highlight an option when selected
 function highlightCheckedOption(e) {
@@ -16,6 +17,35 @@ function highlightCheckedOption(e) {
         element.classList.toggle('highlight')
     }
     document.getElementById(e.target.id).parentElement.classList.toggle('highlight')
+}
+
+//close the modal
+function closeModal() {
+    modal.style.display = "none"
+}
+
+//Render the catimage
+function renderCat() {
+    const checkedBox = document.querySelector('input[type="radio"]:checked')
+    if (checkedBox) {
+        const singleCat = getSingleCat()
+        const innerModal = document.getElementById("meme-modal-inner")
+        innerModal.innerHTML = `
+            <img src="images/${singleCat.image}" alt="${singleCat.alt}" class="cat-img">
+        `
+        modal.style.display = "flex"
+    }
+}
+
+//isolate 1 cat
+function getSingleCat() {
+    const catsArray = getMatchingCatsArray()
+    if (catsArray.length === 1) {
+        return catsArray[0]
+    }
+    else {
+        return catsArray[Math.floor(Math.random()* catsArray.length)]
+    }
 }
 
 //function called by get-image, gets all matching cats from data.js
@@ -32,33 +62,6 @@ function getMatchingCatsArray() {
             }
         })
         return matchingCats
-}
-
-function getSingleCat() {
-    const catsArray = getMatchingCatsArray()
-    if (catsArray.length === 1) {
-        return catsArray[0]
-    }
-    else {
-        return catsArray[Math.floor(Math.random()* catsArray.length)]
-    }
-    
-}
-
-function renderCat() {
-    const checkedBox = document.querySelector('input[type="radio"]:checked')
-    if (checkedBox) {
-        const singleCat = getSingleCat()
-        const innerModal = document.getElementById("meme-modal-inner")
-        innerModal.innerHTML = `
-            <img src="images/${singleCat.image}" alt="${singleCat.alt}" class="cat-img">
-        `
-        modal.style.display = "flex"
-    }
-}
-
-function closeModal() {
-    modal.style.display = "none"
 }
 
 //get all emotions from the cats array into an emotions array
@@ -88,4 +91,5 @@ function renderEmotionsRadios(cats) {
     emotionRadios.innerHTML = htmlString
 }
 
+//render the radios
 renderEmotionsRadios(catsData)
