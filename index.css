@@ -83,6 +83,7 @@ label{
     background-color: #fff0ee;
     color: #bd301d;
     font-weight: bold;
+    accent-color: #bd301d;
 }
 
 .radio:last-child{
@@ -106,7 +107,7 @@ input[type="radio"]{
 }
 
 .get-image-btn{
-    background-color: ##5E512C;
+    background-color: #5E512C;
     color: #E2EDD5;
     padding: 15px 19px;
     font-size: 24px;
