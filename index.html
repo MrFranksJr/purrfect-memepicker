@@ -1,21 +1,22 @@
 <html>
 
-<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
 	<link rel="stylesheet" href="index.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet">
 	<link rel="icon" type="image/x-icon" href="images/favicon.png">
-	<title>Pumpkin's Purrrfect Meme-Picker</title>
+	<title>Kramiek's Purrrfect Meme-Picker</title>
 </head>
 
 <body>
 	<header id="header">
 		<div class="header-inner">
-			<img src="./images/pumpkin.png" class="pumpkin-img">
+			<img src="./images/kramiek.png" class="kramiek-img">
 			<div>
-				<h2>Pumpkin's Purrfect...</h2>
-				<h1>Meme Picker</h1>
+				<h2>Kramiek's Purrrfect...</h2>
+				<h1>Meme-Picker</h1>
 			</div>
 		</div>
 	</header>
@@ -30,65 +31,11 @@
 			<button class="get-image-btn" id="get-image-btn">Get Image</button>
 		</div>
 	</main>
-		<div class="meme-modal" id="meme-modal">
-			<button class="meme-modal-close-btn" id="meme-modal-close-btn">X</button>
-			<div id="meme-modal-inner"></div>
-		</div>
-
-		<input type="checkbox" id="darkmode-toggle" name="checkbox" checked>
-		<label id="dmode" for="darkmode-toggle"><svg class="sun" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512">
-			<g>
-			  <g>
-				<path d="m256,105.5c-83.9,0-152.2,68.3-152.2,152.2 0,83.9 68.3,152.2 152.2,152.2 83.9,0 152.2-68.3 152.2-152.2 0-84-68.3-152.2-152.2-152.2zm0,263.5c-61.4,0-111.4-50-111.4-111.4 0-61.4 50-111.4 111.4-111.4 61.4,0 111.4,50 111.4,111.4 0,61.4-50,111.4-111.4,111.4z"/>
-				<path d="m256,74.8c11.3,0 20.4-9.1 20.4-20.4v-23c0-11.3-9.1-20.4-20.4-20.4-11.3,0-20.4,9.1-20.4,20.4v23c2.84217e-14,11.3 9.1,20.4 20.4,20.4z"/>
-				<path d="m256,437.2c-11.3,0-20.4,9.1-20.4,20.4v22.9c0,11.3 9.1,20.4 20.4,20.4 11.3,0 20.4-9.1 20.4-20.4v-22.9c0-11.2-9.1-20.4-20.4-20.4z"/>
-				<path d="m480.6,235.6h-23c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h23c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4z"/>
-				<path d="m54.4,235.6h-23c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h22.9c11.3,0 20.4-9.1 20.4-20.4 0.1-11.3-9.1-20.4-20.3-20.4z"/>
-				<path d="M400.4,82.8L384.1,99c-8,8-8,20.9,0,28.9s20.9,8,28.9,0l16.2-16.2c8-8,8-20.9,0-28.9S408.3,74.8,400.4,82.8z"/>
-				<path d="m99,384.1l-16.2,16.2c-8,8-8,20.9 0,28.9 8,8 20.9,8 28.9,0l16.2-16.2c8-8 8-20.9 0-28.9s-20.9-7.9-28.9,0z"/>
-				<path d="m413,384.1c-8-8-20.9-8-28.9,0-8,8-8,20.9 0,28.9l16.2,16.2c8,8 20.9,8 28.9,0 8-8 8-20.9 0-28.9l-16.2-16.2z"/>
-				<path d="m99,127.9c8,8 20.9,8 28.9,0 8-8 8-20.9 0-28.9l-16.2-16.2c-8-8-20.9-8-28.9,0-8,8-8,20.9 0,28.9l16.2,16.2z"/>
-			  </g>
-			</g>
-		  </svg><svg class="moon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-		  viewBox="0 0 49.739 49.739" style="enable-background:new 0 0 49.739 49.739;" xml:space="preserve">
-	 <path d="M25.068,48.889c-9.173,0-18.017-5.06-22.396-13.804C-3.373,23.008,1.164,8.467,13.003,1.979l2.061-1.129l-0.615,2.268
-		 c-1.479,5.459-0.899,11.25,1.633,16.306c2.75,5.493,7.476,9.587,13.305,11.526c5.831,1.939,12.065,1.492,17.559-1.258v0
-		 c0.25-0.125,0.492-0.258,0.734-0.391l2.061-1.13l-0.585,2.252c-1.863,6.873-6.577,12.639-12.933,15.822
-		 C32.639,48.039,28.825,48.888,25.068,48.889z M12.002,4.936c-9.413,6.428-12.756,18.837-7.54,29.253
-		 c5.678,11.34,19.522,15.945,30.864,10.268c5.154-2.582,9.136-7.012,11.181-12.357c-5.632,2.427-11.882,2.702-17.752,0.748
-		 c-6.337-2.108-11.473-6.557-14.463-12.528C11.899,15.541,11.11,10.16,12.002,4.936z"/>
-	 <g>
-	 </g>
-	 <g>
-	 </g>
-	 <g>
-	 </g>
-	 <g>
-	 </g>
-	 <g>
-	 </g>
-	 <g>
-	 </g>
-	 <g>
-	 </g>
-	 <g>
-	 </g>
-	 <g>
-	 </g>
-	 <g>
-	 </g>
-	 <g>
-	 </g>
-	 <g>
-	 </g>
-	 <g>
-	 </g>
-	 <g>
-	 </g>
-	 <g>
-	 </g>
-	 </svg></label>
+	<div class="meme-modal" id="meme-modal">
+		<button class="meme-modal-close-btn" id="meme-modal-close-btn">X</button>
+		<div id="meme-modal-inner"></div>
+	</div>
 	<script src="index.js" type="module"></script>
 </body>
+
 </html>
